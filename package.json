@@ -4,9 +4,9 @@
   "description": "js empty project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    
+    "build": "cross-env NODE_ENV=production webpack --progress --config webpack-pro.config.js",
+    "start": "cross-env NODE_ENV=development webpack serve --progress --config webpack-dev.config.js --open --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
